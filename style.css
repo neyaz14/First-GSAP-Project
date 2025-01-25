@@ -177,6 +177,7 @@ nav button {
     background-color: #f9f9f9;
     margin: 0;
     padding: 20px;
+    overflow-x: hidden;
 }
 
 .element1,
@@ -303,7 +304,7 @@ nav button {
     /* margin-left: auto; */
     font-size: 20px;
     display: flex;
-    /* align-items: center; */
+    align-items: center;
     /* justify-content: center; */
     gap: 5px;
     color: #121212;
