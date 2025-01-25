@@ -37,40 +37,45 @@ function page1Animation() {
 }
 // ! --> call page1Animation() ;
 
+function page2Animation(){
+    const tl2 = gsap.timeline({
+        scrollTrigger:{
+            trigger:".services",
+            scroller:"body",
+            // markers:true,
+            start:true,
+            start:"top 60%",
+            scrub:4,
+            end:"top -10%"
+        }
+    })
+    tl2.from(".services", {
+        opacity: 0,
+        x:-200,
+        duration: 0.5,
+    });
+    tl2.from(".card.line1.left",{
+        opacity:0,
+        x:-300,
+        duration:0.6
+    },"line1")
+    tl2.from(".card.line1.right",{
+        opacity:0,
+        x:300,
+        duration:0.6
+    },"line1")
+    tl2.from(".card.line2.left",{
+        opacity:0,
+        x:-300,
+        duration:0.6
+    },"line2")
+    tl2.from(".card.line2.right",{
+        opacity:0,
+        x:300,
+        duration:0.6
+    },"line2")
+}
 
-const tl2 = gsap.timeline({
-    scrollTrigger:{
-        trigger:".services",
-        scroller:"body",
-        // markers:true,
-        start:true,
-        start:"top 50%",
-        scrub:4,
-        // end:"top 10%"
-    }
-})
-tl2.from(".services", {
-    opacity: 0,
-    x:-200,
-    duration: 0.5,
-});
-tl2.from(".card.line1.left",{
-    opacity:0,
-    x:-300,
-    duration:0.6
-},"line1")
-tl2.from(".card.line1.right",{
-    opacity:0,
-    x:300,
-    duration:0.6
-},"line1")
-tl2.from(".card.line2.left",{
-    opacity:0,
-    x:-300,
-    duration:0.6
-},"line2")
-tl2.from(".card.line2.right",{
-    opacity:0,
-    x:300,
-    duration:0.6
-},"line2")
+
+page1Animation()
+page2Animation()
